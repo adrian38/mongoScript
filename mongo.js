@@ -2,10 +2,11 @@
 const MongoClient = require("mongodb").MongoClient;
 
 // URL de conexión a la base de datos
-const url = "mongodb+srv://barbara_api:cbnrzhjQqvAL9eDU@cluster0.ne84d.mongodb.net/dm_demo_dev?authSource=admin&replicaSet=atlas-135rkq-shard-0&w=majority&readPreference=primary&retryWrites=true&ssl=true";
+// const url = "mongodb+srv://barbara_api:cbnrzhjQqvAL9eDU@cluster0.ne84d.mongodb.net/dm_demo_dev?authSource=admin&replicaSet=atlas-135rkq-shard-0&w=majority&readPreference=primary&retryWrites=true&ssl=true";
+const url = "mongodb://adm_idrica:QOap8UivstMjJXnJGPuwO5OJRI@192.168.3.93:27017/";
 const client = new MongoClient(url);
 // Nombre de la base de datos y colecciones
-const databaseName = "dm_dev";
+const databaseName = "dm";
 const sourceCollectionName = "devices";
 const targetCollectionName = "temp";
 
@@ -207,5 +208,54 @@ async function updateSchemaAndData() {
   }
 }
 
+function convertDateFormat(dateString) {
+  const date = new Date(dateString);
+  const isoString = date.toISOString();
+  return isoString;
+}
+
+async function updateDateData() {
+  try {
+    // Conectar a la base de datos
+    await client.connect();
+    const db = client.db(databaseName);
+
+    // Obtener los documentos de la colección de origen
+    const sourceCollection = db.collection(sourceCollectionName);
+    const documents = await sourceCollection.find().toArray();
+
+    // Actualizar cada documento en la colección de destino
+    for (let document of documents) {
+      if (document.data && document.data.wmbus_sensors_data && document.data.wmbus_sensors_data.length > 0) {
+        for (let element of document.data.wmbus_sensors_data) {
+          if (element.data_greylist && element.data_greylist.length > 0) {
+            for (let time of element.data_greylist) {
+              console.log("************* timestamp *************");
+              console.log(time.timestamp);
+              time.timestamp = convertDateFormat(time.timestamp);
+            }
+          }
+        }
+      }
+
+      // Insertar/actualizar el documento en la colección de destino
+      await sourceCollection.updateOne({ _id: document._id }, { $set: document }, { upsert: true });
+    }
+
+    console.log("Actualización completa.");
+
+    // Cerrar la conexión a la base de datos
+    client.close();
+  } catch (error) {
+    console.error("Ocurrió un error durante la actualización:", error);
+  }
+}
+
 // Ejecutar la función de actualización
-updateSchemaAndData();
+// updateSchemaAndData();
+updateDateData();
+
+// const originalDate = "2023-06-20 11:34:30";
+// const convertedDate = convertDateFormat(originalDate);
+// console.log("************* convertedDate *************");
+// console.log(convertedDate);
