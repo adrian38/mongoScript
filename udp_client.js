@@ -40,9 +40,9 @@
 //   '{\r\n"mType":"3",\r\n"hwv":"41",\r\n"seq":"8",\r\n"pv":"10",\r\n"sn":"216001000200",\r\n"opStat":"3",\r\n"dateTime":"22/02/14,16:00:08+04",\r\n"cellId":"72167741",\r\n"tac":"010C",\r\n"sigPw":"-599",\r\n"totPw":"-524",\r\n"ecl":"0",\r\n"snr":"-72",\r\n"ctTx":"7",\r\n"txTime":"2747",\r\n"rxTime":"1957",\r\n"measTime":"5",\r\n"measInt":"15",\r\n"al":"0",\r\n"bat":"3548",\r\n"fwv":"55",\r\n"fwvm":"0",\r\n"imei":"867724032823764",\r\n"imsi":"901288004491524",\r\n"commInt":"15",\r\n"ctReset":"1",\r\n"status":"0",\r\n"crc":"A67BF1A2",\r\n"hash":"523F6A3D"\r\n}\r\n';
 
 let data =
-   // '{\r\n"mType":"3",\r\n"hwv":"41",\r\n"seq":"1331",\r\n"pv":"10",\r\n"sn":"216001000200",\r\n"opStat":"3",\r\n"dateTime":"22/03/09,05:40:01+04",\r\n"cellId":"72167741",\r\n"tac":"010C",\r\n"sigPw":"-590",\r\n"totPw":"-528",\r\n"ecl":"0",\r\n"snr":"6",\r\n"ctTx":"1352",\r\n"txTime":"35400",\r\n"rxTime":"49680",\r\n"measTime":"3183",\r\n"measInt":"15",\r\n"al":"0",\r\n"bat":"3593",\r\n"tem":"154",\r\n"mf":"11043",\r\n"pre":["0"],\r\n"crc":"FEAF00B3",\r\n"hash":"F2AA3C62"\r\n}\r\n';
-   // '{\r\n"mType":"4",\r\n"hwv":"41",\r\n"seq":"1331",\r\n"pv":"10",\r\n"sn":"216001000200",\r\n"opStat":"3",\r\n"dateTime":"22/03/09,05:40:01+04",\r\n"cellId":"72167741",\r\n"tac":"010C",\r\n"sigPw":"-590",\r\n"totPw":"-528",\r\n"ecl":"0",\r\n"snr":"6",\r\n"ctTx":"1352",\r\n"txTime":"35400",\r\n"rxTime":"49680",\r\n"measTime":"3183",\r\n"measInt":"15",\r\n"al":"0",\r\n"bat":"3593",\r\n"tem":"154",\r\n"mf":"11043",\r\n"pre":["0"],\r\n"crc":"4C8CB29E",\r\n"hash":"F2AA3C62"\r\n}\r\n';
-   '{\r\n"mType":"4",\r\n"hwv":"41",\r\n"seq":"1331",\r\n"pv":"10",\r\n"sn":"216001000200",\r\n"opStat":"3",\r\n"dateTime":"22/03/09,05:40:01+04",\r\n"cellId":"72167741",\r\n"tac":"010C",\r\n"sigPw":"-590",\r\n"totPw":"-528",\r\n"ecl":"0",\r\n"snr":"6",\r\n"ctTx":"1352",\r\n"txTime":"35400",\r\n"rxTime":"49680",\r\n"measTime":"3183",\r\n"measInt":"1",\r\n"al":"0",\r\n"bat":"3593",\r\n"tem":"154",\r\n"mf":"11043",\r\n"pre":["0"],\r\n"crc":"72FD4BFA",\r\n"hash":"F2AA3C62"\r\n}\r\n';
+  // '{\r\n"mType":"3",\r\n"hwv":"41",\r\n"seq":"1331",\r\n"pv":"10",\r\n"sn":"216001000200",\r\n"opStat":"3",\r\n"dateTime":"22/03/09,05:40:01+04",\r\n"cellId":"72167741",\r\n"tac":"010C",\r\n"sigPw":"-590",\r\n"totPw":"-528",\r\n"ecl":"0",\r\n"snr":"6",\r\n"ctTx":"1352",\r\n"txTime":"35400",\r\n"rxTime":"49680",\r\n"measTime":"3183",\r\n"measInt":"15",\r\n"al":"0",\r\n"bat":"3593",\r\n"tem":"154",\r\n"mf":"11043",\r\n"pre":["0"],\r\n"crc":"FEAF00B3",\r\n"hash":"F2AA3C62"\r\n}\r\n';
+  // '{\r\n"mType":"4",\r\n"hwv":"41",\r\n"seq":"1331",\r\n"pv":"10",\r\n"sn":"216001000200",\r\n"opStat":"3",\r\n"dateTime":"22/03/09,05:40:01+04",\r\n"cellId":"72167741",\r\n"tac":"010C",\r\n"sigPw":"-590",\r\n"totPw":"-528",\r\n"ecl":"0",\r\n"snr":"6",\r\n"ctTx":"1352",\r\n"txTime":"35400",\r\n"rxTime":"49680",\r\n"measTime":"3183",\r\n"measInt":"15",\r\n"al":"0",\r\n"bat":"3593",\r\n"tem":"154",\r\n"mf":"11043",\r\n"pre":["0"],\r\n"crc":"4C8CB29E",\r\n"hash":"F2AA3C62"\r\n}\r\n';
+  '{\r\n"mType":"4",\r\n"hwv":"41",\r\n"seq":"1331",\r\n"pv":"10",\r\n"sn":"216001000200",\r\n"opStat":"3",\r\n"dateTime":"22/03/09,05:40:01+04",\r\n"cellId":"72167741",\r\n"tac":"010C",\r\n"sigPw":"-590",\r\n"totPw":"-528",\r\n"ecl":"0",\r\n"snr":"6",\r\n"ctTx":"1352",\r\n"txTime":"35400",\r\n"rxTime":"49680",\r\n"measTime":"3183",\r\n"measInt":"1",\r\n"al":"0",\r\n"bat":"3593",\r\n"tem":"154",\r\n"mf":"11043",\r\n"pre":["0"],\r\n"crc":"72FD4BFA",\r\n"hash":"F2AA3C62"\r\n}\r\n';
 // '{\r\n"mType":"4",\r\n"hwv":"41",\r\n"seq":"1331",\r\n"pv":"10",\r\n"sn":"216001000200",\r\n"opStat":"3",\r\n"dateTime":"22/03/09,05:40:01+04",\r\n"cellId":"72167741",\r\n"tac":"010C",\r\n"sigPw":"-590",\r\n"totPw":"-528",\r\n"ecl":"0",\r\n"snr":"6",\r\n"ctTx":"1352",\r\n"txTime":"35400",\r\n"rxTime":"49680",\r\n"measTime":"3183",\r\n"measInt":"5",\r\n"al":"0",\r\n"bat":"3593",\r\n"tem":"154",\r\n"mf":"11043",\r\n"pre":["0"],\r\n"crc":"87C95315",\r\n"hash":"F2AA3C62"\r\n}\r\n';
 
 // let data = '{\r\n"sqCh":"A67BF1A2",\r\n"crc":"CA030DF7",\r\n"hash":"26EF0603"\r\n}\r\n';
@@ -51,24 +51,25 @@ var dgram = require("dgram");
 
 var s = dgram.createSocket("udp4");
 s.send(
-   Buffer.from(data),
+  Buffer.from(data),
 
-   3006,
-   // 3000,
-   // 8700, //pre
-   // 8701, //QA
-   "127.0.0.1"
-   // "192.168.12.94"
-   // "84.124.28.171"
-   // "90.161.157.197"
-   // "157.245.22.55"
-   // "45.93.100.189"
+  3006,
+  //   3000,
+  // 8700, //pre
+  // 8701, //QA
+  //   "127.0.0.1"
+  // "192.168.12.94"
+  // "84.124.28.171"
+  // "90.161.157.197"
+  // "157.245.22.55"
+  "172.28.3.202"
+  // "45.93.100.189"
 );
 
 s.on("message", function (msg, rinfo) {
-   console.log("************* Message from Udp Server *************");
-   console.log(msg.toString());
-   s.close();
+  console.log("************* Message from Udp Server *************");
+  console.log(msg.toString());
+  s.close();
 });
 
 // function stringManometertoSend(data) {
@@ -159,12 +160,12 @@ s.on("message", function (msg, rinfo) {
 
 // let data = ''
 function hex_to_ascii(str1) {
-   var hex = str1.toString();
-   var str = "";
-   for (var n = 0; n < hex.length; n += 2) {
-      str += String.fromCharCode(parseInt(hex.substr(n, 2), 16));
-   }
-   return str;
+  var hex = str1.toString();
+  var str = "";
+  for (var n = 0; n < hex.length; n += 2) {
+    str += String.fromCharCode(parseInt(hex.substr(n, 2), 16));
+  }
+  return str;
 }
 
 //console.log(hex_to_ascii(data))
