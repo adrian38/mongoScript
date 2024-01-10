@@ -2,9 +2,7 @@
 const MongoClient = require("mongodb").MongoClient;
 
 // URL de conexión a la base de datos
-// const url = "mongodb+srv://barbara_api:cbnrzhjQqvAL9eDU@cluster0.ne84d.mongodb.net/dm_demo_dev?authSource=admin&replicaSet=atlas-135rkq-shard-0&w=majority&readPreference=primary&retryWrites=true&ssl=true";
-// const url = "mongodb://adm_idrica:QOap8UivstMjJXnJGPuwO5OJRI@192.168.3.93:27017/";
-const url = "mongodb://adm_idrica:QOap8UivstMjJXnJGPuwO5OJRI@192.168.3.93:27017/"
+const url = "http://localhost";
 const client = new MongoClient(url);
 // Nombre de la base de datos y colecciones
 const databaseName = "dm";
@@ -262,7 +260,7 @@ async function updateDeviceData() {
         const sourceCollection = db.collection(sourceCollectionName);
 
 
-        const devicesId = ["P0ab6CP9bvShJr1Mq5N25tuN2rGQX82M","D16vc1RrKTqQppQpOsXuqsV4oSYGhwyN", "2vAcBdhW16ePr9YDBWTvakp9xdgiwSL5", "vWdcoRk4TAhGTeT4s5h4DSU1Yuv2hPq0", "Qd9hFLslQRjDsUvB5x3G5OAzpLJnxHJj", "t77GqMS8gsjxpSTfCECpUgHunBdDyVM3", "prgxFj5ulN3jaAER8NBHqGDqkCmT5fcN", "dFIopLBrB3lHbdMRHF5YAm88YiCEAsEa", "HiF95vbBKZfQrSVGxpPIguw2Bz54SJVL", "nooV05bGoGBzhtn8T79di8LLMReNn8Ih", "5th0cDox2WUO5PfUPC0oTiGyyvFqR6Dn",];
+        const devicesId = ["P0ab6CP9bvShJr1Mq5N25tuN2rGQX82M", "D16vc1RrKTqQppQpOsXuqsV4oSYGhwyN", "2vAcBdhW16ePr9YDBWTvakp9xdgiwSL5", "vWdcoRk4TAhGTeT4s5h4DSU1Yuv2hPq0", "Qd9hFLslQRjDsUvB5x3G5OAzpLJnxHJj", "t77GqMS8gsjxpSTfCECpUgHunBdDyVM3", "prgxFj5ulN3jaAER8NBHqGDqkCmT5fcN", "dFIopLBrB3lHbdMRHF5YAm88YiCEAsEa", "HiF95vbBKZfQrSVGxpPIguw2Bz54SJVL", "nooV05bGoGBzhtn8T79di8LLMReNn8Ih", "5th0cDox2WUO5PfUPC0oTiGyyvFqR6Dn",];
         const documents = await sourceCollection.find({ deviceId: { $in: devicesId } }).toArray();
 
 
@@ -271,21 +269,21 @@ async function updateDeviceData() {
 
 
             document.data.last_msg_date = new Date();
-            document.data.device_associated= "CZ22B0Q0UYR002805",
-            document.data.meter_type= "SINK",
-            document.data.meter_model= "CZ2000A",
-            document.data.meter_state= "active",
-            document.data.meter_model_attr = "mockup",
-            document.data.meter_caliber= "45",
-            document.data.meter_q3= "88888",
-            document.data.meter_type_of_use = "mockup",
-            document.data.meter_group= "goagua",
-            document.data.meter_situation= "BAJA",
-            document.data.meter_sector= "abando",
-            document.data.last_read_index= 10.7,
-            document.data.id_subscriber= -1,
-            document.data.id_sector_dma= -1,
-            document.data.supply_point= "moyua"
+            document.data.device_associated = "CZ22B0Q0UYR002805",
+                document.data.meter_type = "SINK",
+                document.data.meter_model = "CZ2000A",
+                document.data.meter_state = "active",
+                document.data.meter_model_attr = "mockup",
+                document.data.meter_caliber = "45",
+                document.data.meter_q3 = "88888",
+                document.data.meter_type_of_use = "mockup",
+                document.data.meter_group = "goagua",
+                document.data.meter_situation = "BAJA",
+                document.data.meter_sector = "abando",
+                document.data.last_read_index = 10.7,
+                document.data.id_subscriber = -1,
+                document.data.id_sector_dma = -1,
+                document.data.supply_point = "moyua"
 
             // Insertar/actualizar el documento en la colección de destino
             await sourceCollection.updateOne({ _id: document._id }, { $set: document }, { upsert: true });

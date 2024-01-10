@@ -2,8 +2,7 @@
 const MongoClient = require("mongodb").MongoClient;
 
 // URL de conexión a la base de datos
-const url = "mongodb+srv://barbara_api:cbnrzhjQqvAL9eDU@cluster0.ne84d.mongodb.net/dm_demo_dev?authSource=admin&replicaSet=atlas-135rkq-shard-0&w=majority&readPreference=primary&retryWrites=true&ssl=true";
-// const url = "mongodb://adm_idrica:QOap8UivstMjJXnJGPuwO5OJRI@192.168.3.93:27017/";
+const url = "http://localhost"
 const client = new MongoClient(url);
 // Nombre de la base de datos y colecciones
 const databaseName = "dm_dev";
